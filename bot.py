@@ -19,29 +19,23 @@ async def on_ready():
 @bot.event
 async def on_message(message):
     if message.content.startswith("!운영진"):
-        embed = discord.Embed(color=0xF7FE2E)
+        embed = discord.Embed(Title="단무지", color=0xF7FE2E)
         embed.add_field(name="이름", value="영환\n", inline=False)
         embed.add_field(name="좀비고닉네임", value="플2부터다시\n", inline=False)
-        embed.add_field(name="운영", value="단무지\n", inline=False)
         embed.add_field(name="역할", value="디코 봇 제작\n", inline=False)
-        embed.set_thumbnail(
-            url="https://cdn.discordapp.com/avatars/283193429574418432/9905fb1f4fbdd4ea25800aea045bebce.png?size=128")
+        embed.set_thumbnail(url=mesage.author.avatar_url)
 
-        embed1 = discord.Embed(color=0xDF0101)
+        embed1 = discord.Embed(Title="클마", color=0xDF0101)
         embed1.add_field(name="이름", value="진우", inline=False)
         embed1.add_field(name="좀비고닉네임", value="카트충지누", inline=False)
-        embed1.add_field(name="운영", value="클마", inline=False)
         embed1.add_field(name="역할", value="가입문의", inline=False)
-        embed1.set_thumbnail(
-            url="https://cdn.discordapp.com/avatars/542574486231318529/0f55203e2a3916498487d5fe86ed1af0.png?size=128")
+        embed1.set_thumbnail(url=message.author.avatar_url)
 
-        embed2 = discord.Embed(color=0x00ff00)
+        embed2 = discord.Embed(Title="부마", color=0x00ff00)
         embed2.add_field(name="이름", value="상서", inline=False)
         embed2.add_field(name="좀비고닉네임", value="김상서", inline=False)
-        embed2.add_field(name="운영", value="부마", inline=False)
         embed2.add_field(name="역할", value="drawing picture", inline=False)
-        embed2.set_thumbnail(
-            url="https://cdn.discordapp.com/avatars/652929821692919837/f5424135d42dd61419f9544c1b44ec54.png?size=128")
+        embed2.set_thumbnail(url=message.author.avatar_url)
 
         await message.channel.send(embed=embed1)
         await message.channel.send(embed=embed2)
