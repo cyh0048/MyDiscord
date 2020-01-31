@@ -46,7 +46,7 @@ async def on_message(message):
         await message.channel.send(embed=embed1)
         await message.channel.send(embed=embed2)
         await message.channel.send(embed=embed)
-    if "씨발" in message.content or "개새끼" in message.content or "심한욕설" in message.content
+    if "씨발" in message.content or "개새끼" in message.content or "심한욕설" in message.content\
             or "욕설" in message.content or "Tlqkf" in message.content:
         author = message.guild.get_member(int(message.author.id))
         file = openpyxl.load_workbook("경고.xlsx")
