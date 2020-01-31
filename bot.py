@@ -20,10 +20,10 @@ async def on_ready():
 async def on_message(message):
     if message.content.startswith("!운영진"):
         embed = discord.Embed(color=0xF7FE2E)
-        embed.add_field(name="이름", value="영환", inline=True)
-        embed.add_field(name="좀비고닉네임", value="플2부터다시", inline=True)
-        embed.add_field(name="운영", value="단무지", inline=True)
-        embed.add_field(name="역할", value="디코 봇 제작", inline=True)
+        embed.add_field(name="이름", value="영환\n", inline=True)
+        embed.add_field(name="좀비고닉네임", value="플2부터다시\n", inline=True)
+        embed.add_field(name="운영", value="단무지\n", inline=True)
+        embed.add_field(name="역할", value="디코 봇 제작\n", inline=True)
         embed.set_thumbnail(
             url="https://cdn.discordapp.com/avatars/283193429574418432/9905fb1f4fbdd4ea25800aea045bebce.png?size=128")
 
