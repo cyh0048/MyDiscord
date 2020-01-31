@@ -19,19 +19,19 @@ async def on_ready():
 @bot.event
 async def on_message(message):
     if message.content.startswith("!운영진"):
-        embed = discord.Embed(title="단무지", description="단무지 정보", color=0xF7FE2E)
+        embed = discord.Embed(color=0xF7FE2E)
         embed.add_field(name="이름", value="영환\n", inline=False)
         embed.add_field(name="좀비고닉네임", value="플2부터다시\n", inline=False)
         embed.add_field(name="역할", value="디코 봇 제작\n", inline=False)
         embed.set_thumbnail(url=mesage.author.avatar_url)
 
-        embed1 = discord.Embed(title="클마", description="클마 정보", color=0xDF0101)
+        embed1 = discord.Embed(color=0xDF0101)
         embed1.add_field(name="이름", value="진우", inline=False)
         embed1.add_field(name="좀비고닉네임", value="카트충지누", inline=False)
         embed1.add_field(name="역할", value="가입문의", inline=False)
         embed1.set_thumbnail(url=message.author.avatar_url)
 
-        embed2 = discord.Embed(title="부마", description="부마 정보", color=0x00ff00)
+        embed2 = discord.Embed(color=0x00ff00)
         embed2.add_field(name="이름", value="상서", inline=False)
         embed2.add_field(name="좀비고닉네임", value="김상서", inline=False)
         embed2.add_field(name="역할", value="drawing picture", inline=False)
