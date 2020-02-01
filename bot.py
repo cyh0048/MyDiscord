@@ -100,7 +100,7 @@ async def on_message(message):
         await message.channel.send(embed=inf)
 
     if message.content.startswith("!채팅정리"):
-        await bot.client.purge(channel, limit=100)
+        await bot.client.purge(message.channel, limit=100)
 
 
 
