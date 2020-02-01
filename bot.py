@@ -99,6 +99,9 @@ async def on_message(message):
 
         await message.channel.send(embed=inf)
 
+    if message.content.startswith("!채팅정리"):
+        await bot.client.purge_from(channel, limit=100, check=is_me)
+
 
 
 access_token = os.environ["BOT_TOKEN"]
