@@ -101,9 +101,9 @@ async def on_message(message):
 
         await message.channel.send(embed=inf)
 
-    @client.command()
-    async def clear(ctx, amount=5):
-        await ctx.channel.purge(limit=amount)
+@client.command()
+async def clear(ctx, amount=5):
+    await ctx.channel.purge(limit=amount)
 
 
 
