@@ -94,7 +94,7 @@ async def on_message(message):
 
     if message.content.startswith("!내정보"):
         inf = discord.Embed(title=message.author.name + "님의 정보" , color=0x013ADF)
-        dogsae.add_field(name="디스코드 이름", value=message.author.name, inline=True)
+        inf.add_field(name="디스코드 이름", value=message.author.name, inline=True)
 
 
 access_token = os.environ["BOT_TOKEN"]
