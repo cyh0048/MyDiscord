@@ -100,7 +100,7 @@ async def on_message(message):
         await message.channel.send(embed=inf)
 
     if message.content.startswith("!채팅정리"):
-        async def clear(ctx, amaount):
+        async def clear(ctx, amaount=5):
             await ctx.channel.purge(limit = amount)
 
 
