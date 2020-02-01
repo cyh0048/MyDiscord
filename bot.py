@@ -111,7 +111,7 @@ async def on_message(message):
         elif str(message.author.top_role) == "단무지":
             await message.channel.purge(limit=1000)
         else:
-            await message.channel.send("adf")
+            await message.channel.send("넌 권한없엉")
 
 
 
