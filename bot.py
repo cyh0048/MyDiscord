@@ -7,6 +7,8 @@ from discord.ext.commands import bot
 
 bot = discord.Client()
 
+client = commands.Bot(command_prefix='!')
+
 
 @bot.event
 async def on_ready():
@@ -99,9 +101,9 @@ async def on_message(message):
 
         await message.channel.send(embed=inf)
 
-    if message.content.startswith("!채팅정리"):
-        async def clear(ctx, amaount=5):
-            await ctx.channel.purge(limit = amount)
+    @client.command()
+    async def clear(ctx, amount):
+        await ctx.channel.purge(limit=amount)
 
 
 
