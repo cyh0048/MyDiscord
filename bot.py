@@ -3,25 +3,26 @@ import asyncio
 import openpyxl
 import os
 from discord.ext import commands
+from discord.ext.commands import has_permissions
 from discord.ext.commands import bot
 
-bot = discord.Client()
+bot1 = discord.Client()
 
-client1 = commands.Bot(command_prefix='!')
+client1 = commands.Bot(command_prefix='/')
 
 
-@bot.event
+@bot1.event
 async def on_ready():
     print("login")
-    print(bot.user.name)
-    print(bot.user.id)
+    print(bot1.user.name)
+    print(bot1.user.id)
     print("000----------")
 
 
-@bot.event
+@bot1.event
 async def on_message(message):
     if message.content.startswith("!운영진"):
-        embed = discord.Embed(title ="단무지", color=0xF7FE2E)
+        embed = discord.Embed(title="단무지", color=0xF7FE2E)
         embed.add_field(name="이름", value="영환", inline=False)
         embed.add_field(name="좀비고닉네임", value="플2부터다시", inline=False)
         embed.add_field(name="역할", value="디코 봇 제작", inline=False)
@@ -45,7 +46,7 @@ async def on_message(message):
         await message.channel.send(embed=embed1)
         await message.channel.send(embed=embed2)
         await message.channel.send(embed=embed)
-    if "씨발" in message.content or "개새끼" in message.content or "심한욕설" in message.content\
+    if "씨발" in message.content or "개새끼" in message.content or "심한욕설" in message.content \
             or "욕설" in message.content or "Tlqkf" in message.content:
         author = message.guild.get_member(int(message.author.id))
         file = openpyxl.load_workbook("경고.xlsx")
@@ -62,7 +63,7 @@ async def on_message(message):
                     dogsae2.add_field(name="사용언어", value=message.content, inline=False)
                     dogsae2.add_field(name="상태", value="투아웃", inline=False)
                     dogsae2.set_thumbnail(url=message.author.avatar_url)
-                    await bot.get_channel(int(672143900940697600)).send(embed=dogsae2)
+                    await bot1.get_channel(int(672143900940697600)).send(embed=dogsae2)
                     await message.channel.send(embed=dogsae2)
                     break
                 elif sheet["B" + str(i)].value == 3:
@@ -72,7 +73,7 @@ async def on_message(message):
                     dogsae3.add_field(name="사용언어", value=message.content, inline=False)
                     dogsae3.add_field(name="상태", value="삼진아웃", inline=False)
                     dogsae3.set_thumbnail(url=message.author.avatar_url)
-                    await bot.get_channel(int(672143900940697600)).send(embed=dogsae3)
+                    await bot1.get_channel(int(672143900940697600)).send(embed=dogsae3)
                     await message.channel.send(embed=dogsae3)
                     await message.guild.ban(author)
                     break
@@ -86,13 +87,13 @@ async def on_message(message):
                 dogsae.add_field(name="사용언어", value=message.content, inline=False)
                 dogsae.add_field(name="상태", value="원아웃", inline=False)
                 dogsae.set_thumbnail(url=message.author.avatar_url)
-                await bot.get_channel(int(672143900940697600)).send(embed=dogsae)
+                await bot1.get_channel(int(672143900940697600)).send(embed=dogsae)
                 await message.channel.send(embed=dogsae)
                 break
             i += 1
 
     if message.content.startswith("!내정보"):
-        inf = discord.Embed(title=message.author.name + "님의 정보" , color=0x013ADF)
+        inf = discord.Embed(title=message.author.name + "님의 정보", color=0x013ADF)
         inf.add_field(name="디스코드 이름", value=message.author.name, inline=False)
         inf.add_field(name="디스코드 가입 날짜", value=message.author.created_at, inline=False)
         inf.add_field(name="서버 가입 날짜", value=message.author.joined_at, inline=False)
@@ -100,9 +101,19 @@ async def on_message(message):
         inf.set_thumbnail(url=message.author.avatar_url)
 
         await message.channel.send(embed=inf)
-@client1.command()
-async def clear(ctx, amount=100):
-    await ctx.channel.purge(limit=amount)
 
-access_token = os.environ["BOT_TOKEN"]
-bot.run(access_token)
+    if message.content.startswith("!clear"):
+        a = message.author.top_role
+        if str(message.author.top_role) == "마스터":
+            await message.channel.purge(limit=1000)
+        elif str(message.author.top_role) == "부마스터":
+            await message.channel.purge(limit=1000)
+        elif str(message.author.top_role) == "단무지":
+            await message.channel.purge(limit=1000)
+        else:
+            await message.channel.send("adf")
+
+
+
+# access_token = os.environ["bot1_TOKEN"]
+bot1.run("NjcyNjQyMTAyMjkwNjc3Nzk1.XjU7TA.lDZFgyQRLxMmrb26WqwYnP8CovU")
