@@ -7,7 +7,7 @@ from discord.ext.commands import bot
 
 bot = discord.Client()
 
-client = commands.Bot(command_prefix='!')
+client1 = commands.Bot(command_prefix='!')
 
 
 @bot.event
@@ -100,12 +100,9 @@ async def on_message(message):
         inf.set_thumbnail(url=message.author.avatar_url)
 
         await message.channel.send(embed=inf)
-
-    if message.content.startswith("!채팅정리"):
-        channel = message.channel
-        await message.channel.send(channel)
-
-
+@client1.command()
+async def clear(ctx, amount=100):
+    await ctx.channel.purge(limit=amount)
 
 access_token = os.environ["BOT_TOKEN"]
 bot.run(access_token)
