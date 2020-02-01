@@ -93,7 +93,7 @@ async def on_message(message):
             i += 1
 
     if message.content.startswith("!내정보"):
-        inf = discord.Embed(title=message.author.name + "님의 정보" color=0x013ADF)
+        inf = discord.Embed(title=message.author.name + "님의 정보" , color=0x013ADF)
         dogsae.add_field(name="디스코드 이름", value=message.author.name, inline=True)
 
 
