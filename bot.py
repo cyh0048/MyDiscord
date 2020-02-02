@@ -64,7 +64,7 @@ async def on_message(message):
                     dogsae2.add_field(name="사용언어", value=message.content, inline=False)
                     dogsae2.add_field(name="상태", value="투아웃", inline=False)
                     dogsae2.set_thumbnail(url=message.author.avatar_url)
-                    await bot1.get_channel(int(672143900940697600)).send(embed=dogsae2)
+                    # await bot1.get_channel(int(672143900940697600)).send(embed=dogsae2)
                     await message.channel.send(embed=dogsae2)
                     break
                 elif sheet["B" + str(i)].value == 3:
@@ -74,7 +74,14 @@ async def on_message(message):
                     dogsae3.add_field(name="사용언어", value=message.content, inline=False)
                     dogsae3.add_field(name="상태", value="삼진아웃", inline=False)
                     dogsae3.set_thumbnail(url=message.author.avatar_url)
-                    await bot1.get_channel(int(672143900940697600)).send(embed=dogsae3)
+                    role = ""
+                    member = int(message.author.id)
+                    for i in member.server.roles:
+                        if i.name == "bot"
+                        role = i
+                        break
+                    await bot1.add_roles(member, role)
+                    # await bot1.get_channel(int(672143900940697600)).send(embed=dogsae3)
                     await message.channel.send(embed=dogsae3)
                     await message.guild.ban(author)
                     break
@@ -88,7 +95,7 @@ async def on_message(message):
                 dogsae.add_field(name="사용언어", value=message.content, inline=False)
                 dogsae.add_field(name="상태", value="원아웃", inline=False)
                 dogsae.set_thumbnail(url=message.author.avatar_url)
-                await bot1.get_channel(int(672143900940697600)).send(embed=dogsae)
+                # await bot1.get_channel(int(672143900940697600)).send(embed=dogsae)
                 await message.channel.send(embed=dogsae)
                 break
             i += 1
