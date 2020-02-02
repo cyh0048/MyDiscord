@@ -114,7 +114,28 @@ async def on_message(message):
         else:
             await message.channel.send("넌 권한없엉")
 
-
-
+    if message.content.startswith("!1라운드"):
+        await message.channel.send("1~10까지 골라주세여(!1 ~ !10)")
+        if message.content.startswith("!1"):
+            await message.channel.send("1")
+        elif message.content.startswith("!2"):
+            await message.channel.send("2")
+        elif message.content.startswith("!3"):
+            await message.channel.send("3")
+        elif message.content.startswith("!4"):
+            await message.channel.send("4")
+        elif message.content.startswith("!5"):
+            await message.channel.send("5")
+        elif message.content.startswith("!6"):
+            await message.channel.send("6")
+        elif message.content.startswith("!7"):
+            await message.channel.send("7")
+        elif message.content.startswith("!8"):
+            await message.channel.send("8")
+        elif message.content.startswith("!9"):
+            await message.channel.send("9")
+        elif message.content.startswith("!10"):
+            await message.channel.send("10")
+            
 access_token = os.environ["BOT_TOKEN"]
 bot1.run(access_token)
