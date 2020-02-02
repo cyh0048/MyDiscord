@@ -47,8 +47,8 @@ async def on_message(message):
         await message.channel.send(embed=embed1)
         await message.channel.send(embed=embed2)
         await message.channel.send(embed=embed)
-    if "씨발" in message.content or "개새끼" in message.content or "심한욕설" in message.content \
-            or "욕설" in message.content or "Tlqkf" in message.content:
+    if "씨발" in message.content or "개새끼" in message.content or "샹년" in message.content \
+            or "좆" in message.content or "Tlqkf" in message.content:
         author = message.guild.get_member(int(message.author.id))
         file = openpyxl.load_workbook("경고.xlsx")
         sheet = file.active
@@ -113,40 +113,6 @@ async def on_message(message):
             await message.channel.purge(limit=1000)
         else:
             await message.channel.send("넌 권한없엉")
-
-    if message.content.startswith("!1라운드"):
-        await message.channel.send("1~10까지 골라주세여(!1 ~ !10)")
-        while True:
-            if message.content.startswith("!1"):
-                await message.channel.send("1")
-                break
-            elif message.content.startswith("!2"):
-                await message.channel.send("2")
-                break
-            elif message.content.startswith("!3"):
-                await message.channel.send("3")
-                break
-            elif message.content.startswith("!4"):
-                await message.channel.send("4")
-                break
-            elif message.content.startswith("!5"):
-                await message.channel.send("5")
-                break
-            elif message.content.startswith("!6"):
-                await message.channel.send("6")
-                break
-            elif message.content.startswith("!7"):
-                await message.channel.send("7")
-                break
-            elif message.content.startswith("!8"):
-                await message.channel.send("8")
-                break
-            elif message.content.startswith("!9"):
-                await message.channel.send("9")
-                break
-            elif message.content.startswith("!10"):
-                await message.channel.send("10")
-                break
 
 access_token = os.environ["BOT_TOKEN"]
 bot1.run(access_token)
