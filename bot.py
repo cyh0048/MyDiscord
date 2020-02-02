@@ -77,9 +77,9 @@ async def on_message(message):
                     role = ""
                     member = int(message.author.id)
                     for i in member.server.roles:
-                        if i.name == "bot"
-                        role = i
-                        break
+                        if i.name == "bot":
+                            role = i
+                            break
                     await bot1.add_roles(member, role)
                     # await bot1.get_channel(int(672143900940697600)).send(embed=dogsae3)
                     await message.channel.send(embed=dogsae3)
