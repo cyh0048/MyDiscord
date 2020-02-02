@@ -26,14 +26,14 @@ async def on_message(message):
         embed.add_field(name="이름", value="영환", inline=False)
         embed.add_field(name="좀비고닉네임", value="플2부터다시", inline=False)
         embed.add_field(name="역할", value="디코 봇 제작", inline=False)
-        embed.set_thumbnail(url=message.get_author(str("플2부터다시")).avatar_url)
+        embed.set_thumbnail(url=message.get_member(str("010101")).avatar_url)
 
         embed1 = discord.Embed(title="클마", color=0xDF0101)
         embed1.add_field(name="이름", value="진우", inline=False)
         embed1.add_field(name="좀비고닉네임", value="카트충지누", inline=False)
         embed1.add_field(name="역할", value="가입문의", inline=False)
         embed1.set_thumbnail(
-            url=message.get_author(str("이수")).avatar_url)
+            url=message.get_member(str("이수")).avatar_url)
 
         embed2 = discord.Embed(title="부마", color=0x00ff00)
         embed2.add_field(name="이름", value="상서", inline=False)
