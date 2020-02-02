@@ -74,7 +74,7 @@ async def on_message(message):
                     dogsae3.add_field(name="사용언어", value=message.content, inline=False)
                     dogsae3.add_field(name="상태", value="삼진아웃", inline=False)
                     dogsae3.set_thumbnail(url=message.author.avatar_url)
-                    role = discord.utils.get(message.server.roles, name="bot")
+                    role = "bot"
                     await bot1.add_roles(message.author.id, role)
                     # await bot1.get_channel(int(672143900940697600)).send(embed=dogsae3)
                     await message.channel.send(embed=dogsae3)
