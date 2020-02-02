@@ -33,14 +33,14 @@ async def on_message(message):
         embed1.add_field(name="좀비고닉네임", value="카트충지누", inline=False)
         embed1.add_field(name="역할", value="가입문의", inline=False)
         embed1.set_thumbnail(
-            url=message.get_author(str("카트충지누")).avatar_url)
+            url=message.get_author(str("이수")).avatar_url)
 
         embed2 = discord.Embed(title="부마", color=0x00ff00)
         embed2.add_field(name="이름", value="상서", inline=False)
         embed2.add_field(name="좀비고닉네임", value="김상서", inline=False)
         embed2.add_field(name="역할", value="drawing picture", inline=False)
         embed2.set_thumbnail(
-            url=message.get_author(str("김상서")).avatar_url)
+            url="https://cdn.discordapp.com/avatars/652929821692919837/f5424135d42dd61419f9544c1b44ec54.png?size=128")
 
         await message.channel.send(embed=embed1)
         await message.channel.send(embed=embed2)
