@@ -5,7 +5,6 @@ import os
 
 from discord import Guild
 from discord.ext import commands
-import discord.Guild
 from discord.ext.commands import has_permissions
 from discord.ext.commands import bot
 
