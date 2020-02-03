@@ -23,7 +23,7 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    if message.content.startswith("!운영진"):
+    if message.content.startswith("~운영진"):
         embed = discord.Embed(title="단무지", color=0xF7FE2E)
         embed.add_field(name="이름", value="영환", inline=False)
         embed.add_field(name="좀비고닉네임", value="플2부터다시", inline=False)
@@ -95,7 +95,7 @@ async def on_message(message):
                 break
             i += 1
 
-    if message.content.startswith("!내정보"):
+    if message.content.startswith("~내정보"):
         inf = discord.Embed(title=message.author.name + "님의 정보", color=0x013ADF)
         inf.add_field(name="디스코드 이름", value=message.author.name, inline=False)
         inf.add_field(name="디스코드 가입 날짜", value=message.author.created_at, inline=False)
@@ -105,7 +105,7 @@ async def on_message(message):
 
         await message.channel.send(embed=inf)
 
-    if message.content.startswith("!clear"):
+    if message.content.startswith("~clear"):
         a = message.author.top_role
         if str(message.author.top_role) == "마스터":
             await message.channel.purge(limit=1000)
@@ -117,7 +117,7 @@ async def on_message(message):
             await message.channel.send("넌 권한없엉")
 
 
-    if message.content.startswith("!공지사항"):
+    if message.content.startswith("~공지사항"):
         channel = int(message.channel.id)
         await client.send_message(channel, "hi")
 
