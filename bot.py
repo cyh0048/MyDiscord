@@ -117,9 +117,15 @@ async def on_message(message):
             await message.channel.send("넌 권한없엉")
 
 
-    if message.content.startswith("~공지사항"):
-        channel = int(message.channel.id)
-        await client.send_message(channel, "hi")
+async def my_background_task():
+    await client.wait_until_ready()
+    channel = discord.Object(id='671723726068252676')
+    while not client.is_closed:
+        await client.send_message(channel, "test")
+        await asyncio.sleep(5)
+
+
+    
 
     
 
