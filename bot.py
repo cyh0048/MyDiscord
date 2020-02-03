@@ -118,11 +118,8 @@ async def on_message(message):
 
 
     if message.content.startswith("!공지사항"):
-        await client.wait_until_ready()
-        channel = discord.Object(id='672690741306458113')
-        while not client.is_closed:
-            await client.send_message(channel, "hi")
-            await asyncio.sleep(5)
+        channel = int(message.channel.id)
+        await client.send_message(channel, "hi")
 
     
 
