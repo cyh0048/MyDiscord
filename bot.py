@@ -8,20 +8,20 @@ from discord.ext import commands
 from discord.ext.commands import has_permissions
 from discord.ext.commands import bot
 
-bot1 = discord.Client()
+client = discord.Client()
 
 client1 = commands.Bot(command_prefix='/')
 
 
-@bot1.event
+@client.event
 async def on_ready():
     print("login")
-    print(bot1.user.name)
-    print(bot1.user.id)
+    print(client.user.name)
+    print(client.user.id)
     print("000----------")
 
 
-@bot1.event
+@client.event
 async def on_message(message):
     if message.content.startswith("!운영진"):
         embed = discord.Embed(title="단무지", color=0xF7FE2E)
@@ -64,7 +64,7 @@ async def on_message(message):
                     dogsae2.add_field(name="사용언어", value=message.content, inline=False)
                     dogsae2.add_field(name="상태", value="투아웃", inline=False)
                     dogsae2.set_thumbnail(url=message.author.avatar_url)
-                    # await bot1.get_channel(int(672143900940697600)).send(embed=dogsae2)
+                    # await client.get_channel(int(672143900940697600)).send(embed=dogsae2)
                     await message.channel.send(embed=dogsae2)
                     break
                 elif sheet["B" + str(i)].value == 3:
@@ -75,8 +75,8 @@ async def on_message(message):
                     dogsae3.add_field(name="상태", value="삼진아웃", inline=False)
                     dogsae3.set_thumbnail(url=message.author.avatar_url)
                     role = "bot"
-                    await bot1.add_roles(message.author.id, role)
-                    # await bot1.get_channel(int(672143900940697600)).send(embed=dogsae3)
+                    await client.add_roles(message.author.id, role)
+                    # await client.get_channel(int(672143900940697600)).send(embed=dogsae3)
                     await message.channel.send(embed=dogsae3)
                     await message.guild.ban(author)
                     break
@@ -90,7 +90,7 @@ async def on_message(message):
                 dogsae.add_field(name="사용언어", value=message.content, inline=False)
                 dogsae.add_field(name="상태", value="원아웃", inline=False)
                 dogsae.set_thumbnail(url=message.author.avatar_url)
-                # await bot1.get_channel(int(672143900940697600)).send(embed=dogsae)
+                # await client.get_channel(int(672143900940697600)).send(embed=dogsae)
                 await message.channel.send(embed=dogsae)
                 break
             i += 1
@@ -116,5 +116,15 @@ async def on_message(message):
         else:
             await message.channel.send("넌 권한없엉")
 
+
+    if message.content.startswith("!공지사항"):
+        await client.wait_until_ready()
+        channel = discord.Object(id='672690741306458113')
+        while not client.is_closed:
+            await client.send_message(channel, "hi")
+            await asyncio.sleep(5)
+
+    
+
 access_token = os.environ["BOT_TOKEN"]
-bot1.run(access_token)
+client.run(access_token)
