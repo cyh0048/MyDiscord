@@ -120,13 +120,13 @@ async def on_message(message):
     if message.content.startswith("~잡았다"):
         if str(message.author.top_role) == "마스터":
             author = str(message.content[5:])
-            await message.channel.send(author + "님 미션이 들켰어요ㅠㅠ -1점\n다른 사람을 잡아서 점수를 얻으세용")
+            await message.channel.send(author + "님 미션이 들켰어요ㅠㅠ -1점\n다른 분의 미션을 맞춰서 점수를 얻으세요!!!")
         elif str(message.author.top_role) == "부마스터":
             author = str(message.content[5:])
-            await message.channel.send(author + "님 미션이 들켰어요ㅠㅠ -1점\n다른 사람을 잡아서 점수를 얻으세용")
+            await message.channel.send(author + "님 미션이 들켰어요ㅠㅠ -1점\n다른 분의 미션을 맞춰서 점수를 얻으세요!!!")
         elif str(message.author.top_role) == "단무지":
             author = str(message.content[5:])
-            await message.channel.send(author + "님 미션이 들켰어요ㅠㅠ -1점\n다른 사람을 잡아서 점수를 얻으세용")
+            await message.channel.send(author + "님 미션이 들켰어요ㅠㅠ -1점\n다른 분의 미션을 맞춰서 점수를 얻으세요!!!")
         else:
             await message.channel.send("넌 권한없엉")
 
