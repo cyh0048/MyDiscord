@@ -117,20 +117,6 @@ async def on_message(message):
         else:
             await message.channel.send("넌 권한없엉")
 
-    if message.content.startswith("~잡았다"):
-        if str(message.author.top_role) == "마스터":
-            author = str(message.content[5:])
-            await message.channel.send(author + "님 미션이 들켰어요ㅠㅠ -1점\n다른 분의 미션을 맞춰서 점수를 얻으세요!!!")
-        elif str(message.author.top_role) == "부마스터":
-            author = str(message.content[5:])
-            await message.channel.send(author + "님 미션이 들켰어요ㅠㅠ -1점\n다른 분의 미션을 맞춰서 점수를 얻으세요!!!")
-        elif str(message.author.top_role) == "단무지":
-            author = str(message.content[5:])
-            await message.channel.send(author + "님 미션이 들켰어요ㅠㅠ -1점\n다른 분의 미션을 맞춰서 점수를 얻으세요!!!")
-        else:
-            await message.channel.send("넌 권한없엉")
-
-
 async def my_background_task():
     await client.wait_until_ready()
     channel = discord.Object(id='671723726068252676')
