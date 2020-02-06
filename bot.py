@@ -49,7 +49,8 @@ async def on_message(message):
         await message.channel.send(embed=embed)
     if "씨발" in message.content or "개새끼" in message.content or "샹년" in message.content \
             or "좆" in message.content or "Tlqkf" in message.content or "병신" in message.content or "느금마" in message.content \
-                or "애미" in message.content or "빡대가리" in message.content or "새끼" in message.content or "존나" in message.content:
+                or "애미" in message.content or "빡대가리" in message.content or "새끼" in message.content or "존나" in message.content\
+                    or "썅년" in message.content:
         author = message.guild.get_member(int(message.author.id))
         file = openpyxl.load_workbook("경고.xlsx")
         sheet = file.active
