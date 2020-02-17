@@ -40,7 +40,7 @@ async def on_message(message):
         embed2 = discord.Embed(title="부마", color=0x00ff00)
         embed2.add_field(name="이름", value="연우", inline=False)
         embed2.add_field(name="좀비고닉네임", value="뿌잉연우", inline=False)
-        embed2.add_field(name="역할", value="기여 체크"", inline=False)
+        embed2.add_field(name="역할", value="기여 체크", inline=False)
         embed2.set_thumbnail(
             url="https://cdn.discordapp.com/avatars/670282411480842260/a5d7105eafd2186ad08acd3847828276.png?size=128")
         
