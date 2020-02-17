@@ -20,6 +20,9 @@ async def on_ready():
     print(client.user.id)
     print("000----------")
 
+@client.event
+async def on_member_join(member):
+    await client.get_channel(int(675325877298397215)).send(member+"님 공지를 확인해주세요")
 
 @client.event
 async def on_message(message):
@@ -133,18 +136,6 @@ async def on_message(message):
             await message.channel.purge(limit=1000)
         else:
             await message.channel.send("넌 권한없엉")
-
-async def my_background_task():
-    await client.wait_until_ready()
-    channel = discord.Object(id='671723726068252676')
-    while not client.is_closed:
-        await client.send_message(channel, "test")
-        await asyncio.sleep(5)
-
-
-    
-
-    
 
 access_token = os.environ["BOT_TOKEN"]
 client.run(access_token)
