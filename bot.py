@@ -20,9 +20,14 @@ async def on_ready():
     print(client.user.id)
     print("000----------")
 
+
 @client.event
 async def on_member_join(member):
-    await client.get_channel(int(675325877298397215)).send(member+"님 공지를 확인해주세요")
+    a = str(member)
+    b = a.split('#')
+    c = b[0]
+    await client.get_channel(int(675325877298397215)).send(str(c)+"님 공지를 확인해주세요")
+
 
 @client.event
 async def on_message(message):
