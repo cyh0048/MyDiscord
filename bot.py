@@ -40,21 +40,21 @@ async def on_message(message):
         embed2 = discord.Embed(title="부마", color=0x00ff00)
         embed2.add_field(name="이름", value="연우", inline=False)
         embed2.add_field(name="좀비고닉네임", value="뿌잉연우", inline=False)
-        embed2.add_field(name="역할", value="drawing picture", inline=False)
+        embed2.add_field(name="역할", value="기여 체크"", inline=False)
         embed2.set_thumbnail(
             url="https://cdn.discordapp.com/avatars/670282411480842260/a5d7105eafd2186ad08acd3847828276.png?size=128")
         
         embed3 = discord.Embed(title="부마", color=0x00ff00)
         embed3.add_field(name="이름", value="따용", inline=False)
         embed3.add_field(name="좀비고닉네임", value="띠용-?", inline=False)
-        embed3.add_field(name="역할", value="drawing picture", inline=False)
+        embed3.add_field(name="역할", value="기부 체크", inline=False)
         embed3.set_thumbnail(
             url="https://cdn.discordapp.com/avatars/529951740796207104/3e566732e2b2eafa808f18c2fdded904.png?size=128")
 
         embed4 = discord.Embed(title="부마", color=0x00ff00)
         embed4.add_field(name="이름", value="갬하", inline=False)
         embed4.add_field(name="좀비고닉네임", value="갬하", inline=False)
-        embed4.add_field(name="역할", value="drawing picture", inline=False)
+        embed4.add_field(name="역할", value="관리", inline=False)
         embed4.set_thumbnail(
             url="https://cdn.discordapp.com/avatars/528194843730640898/571b703f020d93a9be96ae2c97135b40.png?size=128")
 
