@@ -31,21 +31,37 @@ async def on_message(message):
         embed.set_thumbnail(url="https://cdn.discordapp.com/avatars/283193429574418432/9905fb1f4fbdd4ea25800aea045bebce.png?size=128")
 
         embed1 = discord.Embed(title="클마", color=0xDF0101)
-        embed1.add_field(name="이름", value="진우", inline=False)
-        embed1.add_field(name="좀비고닉네임", value="카트충지누", inline=False)
+        embed1.add_field(name="이름", value="상서", inline=False)
+        embed1.add_field(name="좀비고닉네임", value="김상서", inline=False)
         embed1.add_field(name="역할", value="가입문의", inline=False)
         embed1.set_thumbnail(
-            url="https://cdn.discordapp.com/avatars/542574486231318529/0f55203e2a3916498487d5fe86ed1af0.png?size=128")
+            url="https://cdn.discordapp.com/avatars/652929821692919837/f5424135d42dd61419f9544c1b44ec54.png?size=128")
 
         embed2 = discord.Embed(title="부마", color=0x00ff00)
-        embed2.add_field(name="이름", value="상서", inline=False)
-        embed2.add_field(name="좀비고닉네임", value="김상서", inline=False)
+        embed2.add_field(name="이름", value="연우", inline=False)
+        embed2.add_field(name="좀비고닉네임", value="뿌잉연우", inline=False)
         embed2.add_field(name="역할", value="drawing picture", inline=False)
         embed2.set_thumbnail(
-            url="https://cdn.discordapp.com/avatars/652929821692919837/f5424135d42dd61419f9544c1b44ec54.png?size=128")
+            url="https://cdn.discordapp.com/avatars/670282411480842260/a5d7105eafd2186ad08acd3847828276.png?size=128")
+        
+        embed3 = discord.Embed(title="부마", color=0x00ff00)
+        embed3.add_field(name="이름", value="따용", inline=False)
+        embed3.add_field(name="좀비고닉네임", value="띠용-?", inline=False)
+        embed3.add_field(name="역할", value="drawing picture", inline=False)
+        embed3.set_thumbnail(
+            url="https://cdn.discordapp.com/avatars/529951740796207104/3e566732e2b2eafa808f18c2fdded904.png?size=128")
+
+        embed4 = discord.Embed(title="부마", color=0x00ff00)
+        embed4.add_field(name="이름", value="갬하", inline=False)
+        embed4.add_field(name="좀비고닉네임", value="갬하", inline=False)
+        embed4.add_field(name="역할", value="drawing picture", inline=False)
+        embed4.set_thumbnail(
+            url="https://cdn.discordapp.com/avatars/528194843730640898/571b703f020d93a9be96ae2c97135b40.png?size=128")
 
         await message.channel.send(embed=embed1)
         await message.channel.send(embed=embed2)
+        await message.channel.send(embed=embed3)
+        await message.channel.send(embed=embed4)
         await message.channel.send(embed=embed)
     if "씨발" in message.content or "개새끼" in message.content or "샹년" in message.content \
             or "좆" in message.content or "Tlqkf" in message.content or "병신" in message.content or "느금마" in message.content \
